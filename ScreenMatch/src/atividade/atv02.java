@@ -10,14 +10,14 @@ public class atv02 {
         senha = sc.nextLine();
 
         try {
-            if (senha.length()<8){
-                throw new SenhaInvalidaException("A senha precisa ter mais de 8 caracteres");
-            }
             System.out.println("Senha cadastrada com sucesso");
         }catch (SenhaInvalidaException e){
             System.out.println(e.getMessage());
         }finally {
             System.out.println("Programa finalizado!");
+        }
+        if (senha.length()<8){
+            throw new SenhaInvalidaException("A senha precisa ter mais de 8 caracteres");
         }
     }
 }
